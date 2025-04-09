@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* Make sure html and body take full height */
+/* html and body take full height */
 html,
 body {
   height: 100%;
@@ -16,7 +16,6 @@ body {
   flex-direction: column;
 }
 
-/* Let main content grow and push footer down */
 main.content-grid {
   flex: 1;
   display: grid;
@@ -25,7 +24,7 @@ main.content-grid {
   padding: 2rem;
 }
 
-/* Footer sits at bottom if content is short */
+/* Footer sits at bottom */
 .footer {
   background: #333;
   color: #fff;
