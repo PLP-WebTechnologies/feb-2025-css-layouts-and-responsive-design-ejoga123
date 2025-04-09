@@ -1,0 +1,121 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Make sure html and body take full height */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  flex-direction: column;
+}
+
+/* Let main content grow and push footer down */
+main.content-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Footer sits at bottom if content is short */
+.footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+body {
+}
+
+/* Navigation bar using Flexbox */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  padding: 1rem 2rem;
+  color: #fff;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Layout using Grid */
+.content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.main-content {
+  background: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.next {
+  background: #ddd;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.footer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .content-grid {
+    padding: 1rem;
+  }
+
+  .main-content,
+  .sidebar {
+    padding: 1rem;
+  }
+}
